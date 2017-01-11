@@ -215,7 +215,7 @@
 				$rootScope.$apply(function () {
 					item.$resolved = true;
 
-					if (response && response.statusCode > 400) {
+					if (response && response.statusCode >= 400) {
 						$log.error(response);
 						deferred.reject(response, item, body);
 					}
